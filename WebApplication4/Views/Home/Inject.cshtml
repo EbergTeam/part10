@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    @inject WebApplication4.Services.ITimeService Timer 
+    @*Директива @inject принимает два параметра: первый параметр представляет тип, 
+                                                            а второй - название переменной этого типа. *@
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    Получаем время через сервис <b>@Timer.GetTime()</b>
+</div>

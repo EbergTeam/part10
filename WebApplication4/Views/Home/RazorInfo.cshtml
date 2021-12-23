@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Тут тестим вывод времени: <b>@DateTime.Now.ToString("hh:mm:ss")</b></p>
+    <p>Тут тестим вычисление <b>@(DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second)</b></p>
+    @{
+        @:Тут начало блок кода <br>@* перенос строки и коммент*@
+        string textHello = "Ну привет";
+        textHello += "!!!";
+        <text>Тут конец блок кода</text>
+    }
+    <p>А тут вывод инфы из блок кода <b>@textHello</b></p>
+    <p>Можно также использовать условные конструкции (if,switch), все циклы (for,while,do...while,foreach) и даже try/catch/finally</p>
+    <p>Еще функции которые могут применяться в представлении
+
+</div>

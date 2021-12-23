@@ -1,0 +1,24 @@
+﻿@model List<string>
+@*директива @model устанавливает модель представления.
+    Тип модели должен совпадать с типом объекта, который передается в метод View() в контроллере
+    допускается отсутствие установки модели такой как @model <тип> в начале страницы, но не будет подсказки при наборе коде в представлении*@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p><b>@ViewData["Message"]</b></p>
+    <p><b>@ViewBag.String</b></p>
+    <p>Количество стран в системе @ViewBag.List.Count :</p>
+    @foreach (string item in ViewBag.List)
+    {
+        <p>@item</p>
+    }
+    <p>Количество игроков @Model.Count</p>
+    @foreach (var item in Model)
+    {
+        <p>@item</p>
+    }
+</div>
